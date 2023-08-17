@@ -23,6 +23,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+
     return Stack(
         children: [
           Image.asset("assets/images/main.bg.png", width: double.infinity,
@@ -32,10 +33,7 @@ class _HomeState extends State<Home> {
 
               appBar: AppBar(
                   title: Text("islami",
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .bodyLarge,
+
                   )),
 
               bottomNavigationBar: BottomNavigationBar(

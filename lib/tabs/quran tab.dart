@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:islam/modals/Sura_modals.dart';
+import 'package:islam/sura_details.dart';
 
 class QuranTab extends StatelessWidget {
   List<String>suraName=["الفاتحه","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود"
@@ -14,40 +16,56 @@ class QuranTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Center(
-      child: Column(
-        // crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Image.asset("assets/images/main_ic.png"),
-          Divider(
-            color:Color(0XFFB7935F),
-            thickness: 2,
-          ),
-          Text("Sura Names",style:Theme.of(context).textTheme.bodyMedium,
-          ),
-          Divider(
-            color:Color(0XFFB7935F) ,
-            thickness: 2,
-          ),
-          Expanded(
-            child: ListView.separated(separatorBuilder: (context,index){
-              return Divider(
-                color: Color(0xFFB7935F),
-                thickness: 1,
-                endIndent: 30,
-                indent: 30,
-              );
-            },
-              itemBuilder: (context,index){
-                return Center(child:Text(suraName[index],
-                  style: Theme.of(context).textTheme.bodySmall
-                  ),);
-              },
-              itemCount:suraName.length,
+    return
+      Center(
+        child: Column(
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Image.asset("assets/images/main_ic.png"),
+            Divider(
+              color: Color(0XFFB7935F),
+              thickness: 2,
             ),
-          )
-        ],
-      ),
-    );
+            Text("Sura Names", style: Theme
+                .of(context)
+                .textTheme
+                .bodyMedium,
+            ),
+            Divider(
+              color: Color(0XFFB7935F),
+              thickness: 2,
+            ),
+            Expanded(
+              child: ListView.separated(separatorBuilder: (context, index) {
+                return Divider(
+                  color: Color(0xFFB7935F),
+                  thickness: 1,
+                  endIndent: 30,
+                  indent: 30,
+                );
+              },
+                itemBuilder: (context, index) {
+                  return InkWell(
+                    onTap: () {
+                          Navigator.pushNamed(context, SuraDetails.routeName,
+                              arguments: SuraModal(suraName[index], index)
+                        );},
+    child:
+                        Center(
+                        child: Text(suraName[index],
+                            style: Theme
+                                .of(context)
+                                .textTheme
+                                .bodySmall
+                        )),
+     );
+                },
+                itemCount: suraName.length,
+              ),
+            )
+          ],
+        ),
+      );
+
   }
 }

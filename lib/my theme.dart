@@ -7,7 +7,14 @@ class MyThemeData{
     scaffoldBackgroundColor: Colors.transparent,
     appBarTheme:AppBarTheme(
     centerTitle: true,
+    iconTheme: IconThemeData(
+      color:primaryColor
+    ),
     backgroundColor: Colors.transparent,
+    titleTextStyle:GoogleFonts.elMessiri(
+      fontSize: 30,
+      fontWeight: FontWeight.bold,
+      color: Color(0xFF242424),),
     elevation: 0.0,
    ),
     textTheme: TextTheme(
