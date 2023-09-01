@@ -34,7 +34,6 @@ class _AhadethTabState extends State<AhadethTab> {
                 Navigator.pushNamed(context, HadethDetails.routeName,
                     arguments:ahadth[index]
                 );
-
               },
                   child: Center(child: Text(ahadth[index].name,style: Theme.of(context).textTheme.bodyMedium,)));
             },

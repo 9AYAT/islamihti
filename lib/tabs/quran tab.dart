@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islam/modals/Sura_modals.dart';
 import 'package:islam/sura_details.dart';
-
 class QuranTab extends StatelessWidget {
   List<String>suraName=["الفاتحه","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود"
     ,"يوسف","الرعد","إبراهيم","الحجر","النحل","الإسراء","الكهف","مريم","طه","الأنبياء","الحج","المؤمنون"
@@ -26,7 +25,8 @@ class QuranTab extends StatelessWidget {
               color: Color(0XFFB7935F),
               thickness: 2,
             ),
-            Text("Sura Names", style: Theme
+            Text("Sura Name",
+                style: Theme
                 .of(context)
                 .textTheme
                 .bodyMedium,

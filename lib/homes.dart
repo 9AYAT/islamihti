@@ -20,28 +20,24 @@ class _HomeState extends State<Home> {
   List<Widget>tabs = [
     QuranTab(),SebhaTab(),RadioTab(),SettingTab(),AhadethTab()
   ];
-
   @override
   Widget build(BuildContext context) {
-
     return Stack(
         children: [
           Image.asset("assets/images/main.bg.png", width: double.infinity,
             fit: BoxFit.fill,),
 
           Scaffold(
-
+              backgroundColor: Colors.transparent,
               appBar: AppBar(
                   title: Text("islami",
-
                   )),
-
               bottomNavigationBar: BottomNavigationBar(
                 // enableFeedback: false,
                 currentIndex: currentIndex,
                 onTap: (value) {
                   currentIndex = value;
-                  setState(() {});
+                  setState((){});
                 },
                 items: [
                   BottomNavigationBarItem(icon: ImageIcon(

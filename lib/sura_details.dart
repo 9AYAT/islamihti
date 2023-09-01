@@ -30,10 +30,9 @@ class _SuraDetailsState extends State<SuraDetails> {
           return Divider(
             color: MyThemeData.primaryColor,
           );
-
         },
           itemBuilder: (context,index){
-          return Center(child: Text(verse[index],textAlign: TextAlign.center,));
+          return Center(child: Text(verse[index],textAlign: TextAlign.center,style: Theme.of(context).textTheme.bodyLarge));
         },
         itemCount: verse.length,) ,
       ),
