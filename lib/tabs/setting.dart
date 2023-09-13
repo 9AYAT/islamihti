@@ -1,10 +1,12 @@
+//import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:islam/MY%20Provide.dart';
+import 'package:islam/buttonsheet.dart';
+import 'package:islam/buttonsheetTheme.dart';
 import 'package:provider/provider.dart';
-
 class SettingTab extends StatelessWidget {
   const SettingTab({super.key});
-
   @override
   Widget build(BuildContext context) {
     var pro=Provider.of<MyProvider>(context);
@@ -23,7 +25,9 @@ class SettingTab extends StatelessWidget {
               child: Text(pro.language=='ar'?'Arabic':'English'),
             ),
           ),SizedBox(height: 25,), Text("Theme"),
-          InkWell(onTap: (){},
+          InkWell(onTap: (){
+            showButtonSheetTheme(context);
+          },
             child: Container(margin: EdgeInsets.all(8),
               width: double.infinity,
               padding:EdgeInsets.all(12),
@@ -31,13 +35,16 @@ class SettingTab extends StatelessWidget {
                   border: Border.all(color: Theme.of(context).primaryColor)) ,
               child: Text("dark"),
             ),
-          )
-        ],
-      ),
-    );
-  }
+          )],),);}
 showButtonSheetLanguage(BuildContext context){
   return showBottomSheet(context: context, builder: (context){
-    return Container();
+    return Button();
+
   },);
-}}
+}
+showButtonSheetTheme(BuildContext context){
+    return showBottomSheet(context:context, builder:(context){
+      return ButtonSheetTheme();
+    },);
+}
+}

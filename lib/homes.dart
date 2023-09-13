@@ -18,7 +18,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int currentIndex = 0;
   List<Widget>tabs = [
-    QuranTab(),SebhaTab(),RadioTab(),SettingTab(),AhadethTab()
+    QuranTab(),SebhaTab(),RadioTab(),AhadethTab(),SettingTab()
   ];
   @override
   Widget build(BuildContext context) {
@@ -49,13 +49,13 @@ class _HomeState extends State<Home> {
                     label: "sebha",
                     backgroundColor: MyThemeData.primaryColor,),
                   BottomNavigationBarItem(icon: ImageIcon(
-                    AssetImage("assets/images/ahadeth.png"), size: 30,),
-                    label: "ahadeth",
-                    backgroundColor: MyThemeData.primaryColor,),
-                  BottomNavigationBarItem(icon: ImageIcon(
                     AssetImage("assets/images/radio.png"), size: 30,),
                       label: "quran",
                       backgroundColor: MyThemeData.primaryColor),
+                  BottomNavigationBarItem(icon: ImageIcon(
+                    AssetImage("assets/images/ahadeth.png"), size: 30,),
+                    label: "ahadeth",
+                    backgroundColor: MyThemeData.primaryColor,),
                   BottomNavigationBarItem(icon: Icon(Icons.settings),
                       label: "settings",
                       backgroundColor: MyThemeData.primaryColor),

@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 class MyThemeData{
   static const Color primaryColor=Color(0xFFB7935F);
-  static const Color darkPrimaryColor=Color(0xFF141A2E);
   static const Color blackColor=Color(0xFF242424);
   static const Color yellow=Color(0xFFFACC1D);
   static ThemeData lightTheme=ThemeData(
-    //accentColor: Colors.black,
+   // accentColor: Colors.black,
     scaffoldBackgroundColor: Colors.transparent,
     appBarTheme:AppBarTheme(
     centerTitle: true,
@@ -50,8 +49,7 @@ class MyThemeData{
 
   );
   static ThemeData darkTheme=ThemeData(
-  //accentColor: yellow,
-  primaryColor: darkPrimaryColor,
+ // accentColor: yellow,
   scaffoldBackgroundColor: Colors.transparent,
   appBarTheme:AppBarTheme(
   centerTitle: true,
@@ -88,7 +86,7 @@ class MyThemeData{
   ),
   showSelectedLabels: false,
   showUnselectedLabels: false,
-  backgroundColor:darkPrimaryColor,
+  backgroundColor:blackColor,
   selectedItemColor: yellow,
   unselectedItemColor: Colors.white
   )

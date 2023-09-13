@@ -30,11 +30,11 @@ class MyApp extends StatelessWidget {
       locale: Locale(provider.language),
       supportedLocales: [
       Locale('en'), // English
-      Locale('ar'), // Spanish
+      Locale('ar'),
     ],
       theme:MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,
-      themeMode: ThemeMode.light,
+      themeMode: provider.themeMode,
       debugShowCheckedModeBanner: false,
         initialRoute: Home.routeName,
         routes: {Home.routeName: (context) => Home(),
